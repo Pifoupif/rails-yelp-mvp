@@ -1,2 +1,25 @@
-<h1>Restaurants#show</h1>
-<p>Find me in app/views/restaurants/show.html.erb</p>
+
+<div class="container text-center">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <h1>Restaurants#show</h1>
+          <div class="resto">
+            <h3>
+              <%= @restaurant.name  %>
+            </h3>
+            <p>
+              <%= @restaurant.address  %>
+            </p>
+          </div>
+      <div class="btn btn-success">
+        <%= link_to "add a review", new_restaurant_review_path(@restaurant)  %>
+      </div>
+      <div class="btn btn-primary">
+        <%= link_to "back to the list", restaurants_path %>
+      </div>
+      <div class="btn btn-danger">
+        <%= link_to "see restaurant reviews", restaurant_reviews_path(@restaurant) %>
+      </div>
+    </div>
+  </div>
+</div>
